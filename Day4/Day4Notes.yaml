@@ -1,0 +1,63 @@
+📑 Agenda for Week 2 Day 2 - Playwright Locators 
+🎯 [ Focus: Mastering Locators for Precise Automation ]  
+
+📆 Date: 01 June 2025 [Sunday]  
+
+🕝 Session Highlights
+
+ Recap  
+* Key Takeaways from Week2 Day 1
+
+⿡ Browser, Context, and Page
+* Breaking Down the Key Concepts  
+* Real-life Use Cases in Automation  
+
+⿢ Code Your First Test Script
+* Hands-on Activity: Writing and Executing a Basic Script 
+
+⿣ Configuration File Walkthrough
+* Understanding playwright.config.ts.  
+
+⿤ Understanding the DOM
+* What is the DOM and How It Works 
+
+⿥ XPath Selectors
+* Relative vs. Absolute XPath: What's Better?  
+* Practical Use Cases with XPath Examples. 
+
+⿦ CSS Selectors  
+* Basic and Advanced CSS Selector Techniques.  
+* Hands-on Example: Using ID, Class, and Attribute Selectors.  
+
+⿧ Playwright's getBy Locators
+* Explore getByText, getByRole, getByLabel, and more.  
+* Accessibility-first Automation with getBy Methods.  
+* Real-time Activity: Automating a Login Form.  
+
+
+🕡 Wrap Up / Q&A 
+
+📝 Keep your physical notebook and pen handy to sketch out ideas!
+
+
+Three levels of configurations :
+
+1. CLI - Highest priority [execute in command line]
+
+2. Test level configuration - Higher that the congif file[Execute using Open in Integrated Terminal]
+
+3. playwright.config.ts(default configuration)- least priority [This executes in the root directory]
+
+
+Commands used :
+
+To create a playwright file - filename.spec.ts
+
+To run the test file - npx playwright test filename.spec.ts
+
+To open the test report - npx playwright show-report
+
+
+Default mode - headless
+
+//Set up 
