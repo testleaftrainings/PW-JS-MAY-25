@@ -1,0 +1,60 @@
+📑 Agenda for Week 4 Day 2: Handling Alerts, Frames & Windows
+
+🎯 [Focus: Understanding how to interact with alerts, frames and windows]  
+
+📆 Date: 15 June [Sunday]  
+
+🕝 Session Highlights
+
+⿡ Recap
+* Quick review of key learnings from previous sessions.  
+
+⿢ Alerts Handling
+* Understanding Playwright’s support for JavaScript alerts, prompts, and confirmations.  
+* Automating acceptance or dismissal of alerts.  
+
+⿣ Interaction with Frames
+* Understanding the concept of iframes in web applications.  
+* Navigating into and interacting with elements inside frames.  
+  
+⿣ Handling Multiple Windows / Tabs  
+* Managing multiple windows or tabs in Playwright.  
+* Switching between windows and tabs efficiently.  
+
+
+🕡 Wrap Up / Q&A  
+
+📝 Keep your physical notebook and pen handy to sketch out ideas
+
+Assertions :
+
+1. Generic Assertions:
+-Asserting the values in the tests.
+
+toBe, toEqual, toGreaterThan, toContain, toContainEqual
+
+2. Locator Assertions
+
+-Asserting the locators. example button, textbox
+toBeVisible, toBeEnabled, toHaveAttribute, toHaveText
+
+3. Page Assertions.
+-Get the title of the page and url.
+title, url
+
+4. Snapshot Assertions.
+-Will assert the snapshot when you fo for visual testing.
+
+5. API Reference Assertions
+When ever you want to go for an API response you can go for API assertions.
+
+Methods to intreact with your frames :
+
+a. page.frames - simple and straightforward
+
+1. url
+2. name
+3. index
+
+
+b. framelocators
