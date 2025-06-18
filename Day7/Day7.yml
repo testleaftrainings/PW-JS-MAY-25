@@ -1,0 +1,59 @@
+📑 Agenda for Week 4 Day 1: TypeScript Key Features 
+ 
+🎯 [Focus: TypeScript’s Key Features]  
+
+📆 Date: 14 June [Saturday]  
+
+🕝 Session Highlights  
+
+⿢ Understanding Arrays in JavaScript  
+* Basics of Arrays: What and Why?  
+* Common Methods and Operations on Arrays.  
+
+⿣ Promises in JavaScript
+* Asynchronous Programming: Callbacks vs. Promises.  
+* Anatomy of a Promise: States and Methods (then, catch).  
+* Real-world Use Case: Fetching Data Using Promises.  
+
+⿤ Introduction to TypeScript
+* What is TypeScript, and Why Use It?  
+* Setting Up a TypeScript Environment.  
+* Basic Syntax and First TypeScript Program.  
+
+⿥ TypeScript Types  
+* Overview of Types in TypeScript:  
+* Hands-on: Declaring Variables with Different Types.  
+
+⿦ Explicit Types & Annotations 
+* Why Use Type Annotations?  
+* Explicitly Defining Function Parameters and Return Types.  
+* Examples:  
+     * Using Annotations with Arrays, Objects, and Functions.  
+     * Type Inference vs. Explicit Types.  
+
+⿢ Type Aliases  
+* What are Type Aliases and why use them?  
+* Syntax and examples.     
+  
+
+🕡 Wrap Up / Q&A  
+
+📝 Keep your physical notebook and pen handy to sketch out ideas!
+
+
+TypeScript
+Superset of JavaScript
+Static typing
+
+"tsc filename.ts" command to compile your .ts file and then after compilation you have to run "node filename.js"
+
+Global installation 
+
+npm install -g typescript
+
+Local installation
+
+npm install typescript --save-dev
+
+
+To check the version --> tsc --version
