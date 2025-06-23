@@ -1,1 +1,0 @@
-Learning to File Upload in Playwright.
