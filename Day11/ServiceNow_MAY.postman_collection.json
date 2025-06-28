@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "0072c8c1-e869-4860-a184-c32e40fa41ee",
+		"name": "ServiceNow_MAY",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37723804",
+		"_collection_link": "https://pwmar3.postman.co/workspace/PW_API~177aa0a1-f6e2-4ff5-8652-9d8dd56f3ec2/collection/37723804-0072c8c1-e869-4860-a184-c32e40fa41ee?action=share&source=collection_link&creator=37723804"
+	},
+	"item": [
+		{
+			"name": "Create Resource",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "4xU6@ZgGkp@W",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\":\"Laptop issue\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dev281454.service-now.com/api/now/table/incident",
+					"protocol": "https",
+					"host": [
+						"dev281454",
+						"service-now",
+						"com"
+					],
+					"path": [
+						"api",
+						"now",
+						"table",
+						"incident"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch record",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "4xU6@ZgGkp@W",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\":\"Laptop issue\"\r\n}"
+				},
+				"url": {
+					"raw": "https://dev281454.service-now.com/api/now/table/incident/487a741bc3122210f92c36dc050131d3",
+					"protocol": "https",
+					"host": [
+						"dev281454",
+						"service-now",
+						"com"
+					],
+					"path": [
+						"api",
+						"now",
+						"table",
+						"incident",
+						"487a741bc3122210f92c36dc050131d3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Record",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "4xU6@ZgGkp@W",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"short_description\":\"Laptop issue\",\r\n\"location\":\"Chennai\"\r\n}"
+				},
+				"url": {
+					"raw": "https://dev281454.service-now.com/api/now/table/incident/487a741bc3122210f92c36dc050131d3",
+					"protocol": "https",
+					"host": [
+						"dev281454",
+						"service-now",
+						"com"
+					],
+					"path": [
+						"api",
+						"now",
+						"table",
+						"incident",
+						"487a741bc3122210f92c36dc050131d3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Resource",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "4xU6@ZgGkp@W",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dev281454.service-now.com/api/now/table/incident/487a741bc3122210f92c36dc050131d3",
+					"protocol": "https",
+					"host": [
+						"dev281454",
+						"service-now",
+						"com"
+					],
+					"path": [
+						"api",
+						"now",
+						"table",
+						"incident",
+						"487a741bc3122210f92c36dc050131d3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

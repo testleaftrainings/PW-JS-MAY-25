@@ -1,0 +1,281 @@
+{
+	"info": {
+		"_postman_id": "3b6499bc-3dff-4829-b829-a180c259c1d9",
+		"name": "Salesforce_MAY",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37723804",
+		"_collection_link": "https://pwmar3.postman.co/workspace/PW_API~177aa0a1-f6e2-4ff5-8652-9d8dd56f3ec2/collection/37723804-3b6499bc-3dff-4829-b829-a180c259c1d9?action=share&source=collection_link&creator=37723804"
+	},
+	"item": [
+		{
+			"name": "Generate Token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var response=pm.response.json()\r",
+							"console.log(response)\r",
+							"var resToken=response.access_token\r",
+							"var url=response.instance_url\r",
+							"\r",
+							"pm.globals.set(\"ResourceTk\",resToken)\r",
+							"pm.globals.set(\"Ins_url\",url)"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "3MVG9VMBZCsTL9hnYaVamF_yN9dU9vnyYTjdMcnDvjqPwwaBINmmrxc5nreM3diNAwBKSsbWXhbOweaL8rdNB",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "045B87EED90898F6D00920E973955E048E340B15506294A39847C4C824C8E260",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "ravindran.ramdas@testleaf.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "RaviSalesTest#1432",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://login.salesforce.com/services/oauth2/token",
+					"protocol": "https",
+					"host": [
+						"login",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"oauth2",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Lead",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var response=pm.response.json()\r",
+							"console.log(response)\r",
+							"var resId=response.id\r",
+							"\r",
+							"pm.globals.set(\"ResourceId\",resId)\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{ResourceTk}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"lastname\":\"Ravindran\",\r\n    \"company\":\"Testleaf\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{Ins_url}}/services/data/v64.0/sobjects/Lead/",
+					"protocol": "https",
+					"host": [
+						"{{Ins_url}}"
+					],
+					"path": [
+						"services",
+						"data",
+						"v64.0",
+						"sobjects",
+						"Lead",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Specific Lead",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "00DNS000001rTAX!AQEAQDUiyOsu5_u7LszZ9WTu15w2tlxNXxgwoVHLK5U2ogqPkps54XkOjkk1yqusEPWu3QzKEi2oXvocN17eOXve70mEjMj3",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"lastname\":\"Ravindran\",\r\n    \"company\":\"Testleaf\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testleaf22-dev-ed.develop.my.salesforce.com/services/data/v64.0/sobjects/Lead/00QNS00000Wty9B2AR",
+					"protocol": "https",
+					"host": [
+						"testleaf22-dev-ed",
+						"develop",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"data",
+						"v64.0",
+						"sobjects",
+						"Lead",
+						"00QNS00000Wty9B2AR"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update the Lead",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "00DNS000001rTAX!AQEAQDUiyOsu5_u7LszZ9WTu15w2tlxNXxgwoVHLK5U2ogqPkps54XkOjkk1yqusEPWu3QzKEi2oXvocN17eOXve70mEjMj3",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\":\"R\",\r\n    \"company\":\"Testleaf\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testleaf22-dev-ed.develop.my.salesforce.com/services/data/v64.0/sobjects/Lead/00QNS00000Wty9B2AR",
+					"protocol": "https",
+					"host": [
+						"testleaf22-dev-ed",
+						"develop",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"data",
+						"v64.0",
+						"sobjects",
+						"Lead",
+						"00QNS00000Wty9B2AR"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Specific Lead",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "00DNS000001rTAX!AQEAQDUiyOsu5_u7LszZ9WTu15w2tlxNXxgwoVHLK5U2ogqPkps54XkOjkk1yqusEPWu3QzKEi2oXvocN17eOXve70mEjMj3",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\":\"R\",\r\n    \"company\":\"Testleaf\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testleaf22-dev-ed.develop.my.salesforce.com/services/data/v64.0/sobjects/Lead/00QNS00000Wty9B2AR",
+					"protocol": "https",
+					"host": [
+						"testleaf22-dev-ed",
+						"develop",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"data",
+						"v64.0",
+						"sobjects",
+						"Lead",
+						"00QNS00000Wty9B2AR"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
