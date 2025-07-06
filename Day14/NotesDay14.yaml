@@ -1,0 +1,76 @@
+📑 **Agenda for Week 7 Day 2: OOPs in TypeScript
+
+🎯 [Focus: Mastering Object-Oriented Programming Concepts in TypeScript]
+
+📆 [06th July Sunday]
+
+🕝 Session Highlights
+
+1️⃣ Recap
+Quick review of previous learnings.
+
+2️⃣ Class & Objects
+
+Understanding the basics of classes and objects in TypeScript.
+Examples: Creating and using classes and objects.
+
+3️⃣ Constructors
+
+Role of constructors in initializing objects.
+Examples: Using parameterized and default constructors.
+
+4️⃣ Access Modifiers
+
+Understanding public, private, and protected access modifiers.
+Examples: Controlling access to class properties and methods.
+
+5️⃣ Inheritance
+
+Exploring the concept of inheritance for code reuse.
+Examples: Implementing single and multilevel inheritance.
+
+🕡 Wrap Up / Q&A
+
+📝 Keep your physical notebook and pen handy to sketch out ideas and test workflows!
+
+
+Agenda :
+
+1. Class and Object.
+2. Method and properties.
+3. Constructor.
+4. Accessmodifiers.
+5. Encapsulation.
+6. Inheritance.
+
+
+class -
+group of features shares by an object.
+Design/ template to build an object.
+
+property --> information in the that particular page.
+method --> action performed 
+
+class ClassName{
+//properties
+
+//method
+}
+
+let variableNameFeature1 = new ClassName
+
+variableNameFeature1.method()
+
+let variableNameFeature2 = new ClassName
+
+variableNameFeature2.method()
+
+
+Accessmodifiers--> set up scope of Class member --> property and method
+
+1. public --> can be accessed inside and outside of the class
+2, protected --> can be accessed inside the class as well as the related class --> relationship --> inherit
+3. private -->not accessible outside the class --> give permission to access or to rewrite using "get and "set"
+
+4. readonly--> constant/final --> cannot be changed
+5. static
